@@ -1,4 +1,4 @@
-name: brain-games check
+name: brain-games-check
 on:
   push:
     branches:
