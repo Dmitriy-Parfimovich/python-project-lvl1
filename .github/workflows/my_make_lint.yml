@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my_poetry_run_flake8 
-        run: |
-          make lint
+        run: make lint
