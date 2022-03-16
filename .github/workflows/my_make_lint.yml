@@ -1,0 +1,10 @@
+name: my-make-lint
+
+on: push
+    
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my_poetry_run_flake8 
+        run: make lint
