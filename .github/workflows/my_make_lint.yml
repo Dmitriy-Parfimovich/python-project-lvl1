@@ -1,4 +1,4 @@
-name: my-make-lint
+name: brain-games check
 on:
   push:
     branches:
@@ -7,5 +7,8 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+      - uses: actions/setup-python@v2
       - name: my_poetry_run_flake8 
         run: make lint
