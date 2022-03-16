@@ -6,4 +6,4 @@
 
 
 ### Workflow status badge:
-![Workflow status](https://github.com/Dmitriy-Parfimovich/python-project-lvl1/actions/workflows/my_make_lint.yml/badge.svg)
+![Workflow status](https://github.com/Dmitriy-Parfimovich/python-project-lvl1/actions/workflows/brain_games_check.yml/badge.svg)
