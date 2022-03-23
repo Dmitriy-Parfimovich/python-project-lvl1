@@ -2,7 +2,7 @@
 
 import prompt
 
-
+# just welcome function-------------------------------------------------
 def welcome_user():
 
     name = prompt.string('May I have you name? ')
