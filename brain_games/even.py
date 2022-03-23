@@ -3,6 +3,7 @@
 from brain_games.cli import welcome_user
 from random import randint
 
+
 # getting an answer from user-------------------------------------------
 def get_answer():
     global answer, x
@@ -13,6 +14,7 @@ def get_answer():
         print('Your answer: ', end='')
         answer = input()
     return answer, x
+
 
 # execution of correct answer from user---------------------------------
 def execute_correct_answer():
@@ -27,6 +29,7 @@ def execute_correct_answer():
         break_out_flag = True
         s += 1
 
+
 # execution of wrong answer from user-----------------------------------
 def execute_wrong_answer():
     global answer, x
@@ -36,6 +39,7 @@ def execute_wrong_answer():
     if answer == 'no' and x % 2 == 0 and x != 0:
         print("'no' is wrong answer ;(. Correct answer was 'yes'.")
         return print("Let's try again, {}!".format(name))
+
 
 # brain-even game function----------------------------------------------
 def find_even():
