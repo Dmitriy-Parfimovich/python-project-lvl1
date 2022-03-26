@@ -10,4 +10,4 @@
 
 
 ### Asciinema for Brain-even game:
-[![Asciinema for Brain-even game](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3)]
+[![asciicast](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3.png)](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3)
