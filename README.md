@@ -7,3 +7,7 @@
 
 ### Workflow status badge:
 ![Workflow status](https://github.com/Dmitriy-Parfimovich/python-project-lvl1/actions/workflows/brain_games_check.yml/badge.svg)
+
+
+### Asciinema for Brain-even game
+![Asciinema for Brain-even game](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3)
