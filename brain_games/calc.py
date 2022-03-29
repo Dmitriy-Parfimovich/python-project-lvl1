@@ -1,52 +1,55 @@
 #!/usr/bin/env python
 
 from brain_games.cli import welcome_user
-from random import randint
+from random import randint, choice
 
 
 # getting an answer from user-------------------------------------------
 def get_answer():
-    global answer, x
+    global answer, calc
     x = randint(0, 99)
+    y = randint(0, 99)
+    arithmetic = ['+', '-', '*']
+    arithmetic = choice(arithmetic)
     answer = ''
-    print('Question:', x)
-    while answer == '' or (answer != 'yes' and answer != 'no'):
+    print(f"Question: {x} {arithmetic} {y}")
+    if arithmetic == '+':
+        calc = x + y
+    if arithmetic == '-':
+        calc = x - y
+    if arithmetic == '*':
+        calc = x * y
+    while answer == '':
         print('Your answer: ', end='')
         answer = input()
-    return answer, x
+    return answer, calc
 
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global answer, x, break_out_flag, s
+    global answer, calc, break_out_flag, s
     break_out_flag = False
-    if answer == 'yes' and x % 2 == 0 and x != 0:
+    if answer == str(calc):
         print('Correct!')
         break_out_flag = True
         s += 1
-    if answer == 'no' and (x % 2 != 0 or x == 0):
-        print('Correct!')
-        break_out_flag = True
-        s += 1
+    return break_out_flag
 
 
 # execution of the wrong answer from user-------------------------------
 def execute_wrong_answer():
-    global answer, x
-    if answer == 'yes' and (x % 2 != 0 or x == 0):
-        print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-        return print("Let's try again, {}!".format(name))
-    if answer == 'no' and x % 2 == 0 and x != 0:
-        print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+    global answer, calc
+    if answer != str(calc):
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{calc}'.")
         return print("Let's try again, {}!".format(name))
 
 
-# brain-even game function----------------------------------------------
-def find_even():
-    global answer, x, name, break_out_flag, s
+# brain-calc game function----------------------------------------------
+def get_calc():
+    global answer, calc, name, break_out_flag, s
     name = welcome_user()
     s = 0
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     for i in range(3):
         get_answer()
         execute_correct_answer()
