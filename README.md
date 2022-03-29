@@ -11,3 +11,7 @@
 
 ### Asciinema for Brain-even game:
 [![asciicast](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3.svg)](https://asciinema.org/a/gNunRtsRcvLUfpVBDnWfc07C3)
+
+
+### Asciinema for Brain-calc game:
+[![asciicast](https://asciinema.org/a/6bHRXa4ZJRFMdfsDLF3OA8rNz.svg)](https://asciinema.org/a/6bHRXa4ZJRFMdfsDLF3OA8rNz)
