@@ -16,9 +16,7 @@ def get_answer():
 
 # calculation of the gcd------------------------------------------------
 def calculation_gcd():
-    global x
-    x = randint(1, 99)
-    y = randint(1, 99)
+    global x, y
     print(f"Question: {x} {y}")
     while x != y:
         if x > y:
@@ -50,11 +48,13 @@ def execute_wrong_answer():
 
 # brain-gcd game function----------------------------------------------
 def get_gcd():
-    global x, answer, name, break_out_flag, s
+    global x, y, answer, name, break_out_flag, s
     name = welcome_user()
     s = 0
     print('Find the greatest common divisor of given numbers.')
     for i in range(3):
+        x = randint(1, 99)
+        y = randint(1, 99)
         calculation_gcd()
         get_answer()
         execute_correct_answer()
