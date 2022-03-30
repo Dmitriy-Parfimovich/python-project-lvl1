@@ -20,14 +20,13 @@ def calculation_gcd():
     x = randint(1, 99)
     y = randint(1, 99)
     print(f"Question: {x} {y}")
-    if x == y:
-        return x
     while x != y:
         if x > y:
             x = x - y
         if y > x:
             y = y - x
-    return x
+    if x == y:
+        return x
 
 
 # execution of the correct answer from user-----------------------------
