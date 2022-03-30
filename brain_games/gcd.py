@@ -23,8 +23,7 @@ def calculation_gcd():
             x = x - y
         if y > x:
             y = y - x
-    if x == y:
-        return x
+    return x
 
 
 # execution of the correct answer from user-----------------------------
