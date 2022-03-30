@@ -6,10 +6,19 @@ from random import randint
 
 # getting an answer from user-------------------------------------------
 def get_answer():
-    global answer, x
+    global answer
+    answer = ''
+    while answer == '':
+        print('Your answer: ', end='')
+        answer = input()
+    return answer
+
+
+# calculation of the gcd------------------------------------------------
+def calculation_gcd():
+    global x
     x = randint(1, 99)
     y = randint(1, 99)
-    answer = ''
     print(f"Question: {x} {y}")
     if x == y:
         return x
@@ -18,10 +27,7 @@ def get_answer():
             x = x - y
         if y > x:
             y = y - x
-    while answer == '':
-        print('Your answer: ', end='')
-        answer = input()
-    return answer, x
+    return x
 
 
 # execution of the correct answer from user-----------------------------
@@ -50,6 +56,7 @@ def get_gcd():
     s = 0
     print('Find the greatest common divisor of given numbers.')
     for i in range(3):
+        calculation_gcd()
         get_answer()
         execute_correct_answer()
         if break_out_flag is False:
