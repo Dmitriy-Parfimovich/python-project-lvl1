@@ -15,3 +15,7 @@
 
 ### Asciinema for Brain-calc game:
 [![asciicast](https://asciinema.org/a/6bHRXa4ZJRFMdfsDLF3OA8rNz.svg)](https://asciinema.org/a/6bHRXa4ZJRFMdfsDLF3OA8rNz)
+
+
+### Asciinema for Brain-gcd game:
+[![asciicast](https://asciinema.org/a/qFgjdGTJzHyscJR4SnoeQLRod.svg)](https://asciinema.org/a/qFgjdGTJzHyscJR4SnoeQLRod)
