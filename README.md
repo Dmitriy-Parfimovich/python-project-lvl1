@@ -23,3 +23,6 @@
 
 ### Asciinema for Brain-progression game:
 [![asciicast](https://asciinema.org/a/b8JNPxu8PfFd62HUwk7w14unF.svg)](https://asciinema.org/a/b8JNPxu8PfFd62HUwk7w14unF)
+
+### Asciinema for Brain-prime game:
+[![asciicast](https://asciinema.org/a/3XToKTnFWveV0aF7qOb41vykc.svg)](https://asciinema.org/a/3XToKTnFWveV0aF7qOb41vykc)
