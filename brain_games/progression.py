@@ -18,23 +18,14 @@ def get_answer():
 def generate_arith_progression():
     global r
     while True:
-        x = randint(0, 99)
-        y = randint(0, 99)
-        step = randint(1, 99)
-        i = randint(5, 10)
-        if x < y and step <= ((y - x) // 5):
-            r = range(x, y, step)
-            r = r[0:i]
-            return r
-        if y < x and step <= ((x - y) // 5):
-            r = range(y, x, step)
-            r = r[0:i]
+        r = range(randint(0, 99), randint(0, 99), randint(1, 99))
+        if 4 < len(r) < 11:
             return r
 
 
 # getting of the arithmetic progresson with a hidden char----------------
 def get_sequence_with_hidden():
-    global r, sequence_with_hidden, n
+    global r, sequence_with_hidden, n, i
     generate_arith_progression()
     max_of_sequence = len(r) - 1
     n = randint(0, max_of_sequence)
@@ -66,14 +57,13 @@ Correct answer was '{str(r[n])}'.")
         return print("Let's try again, {}!".format(name))
 
 
-# brain-gcd game function----------------------------------------------
+# brain-progression game function----------------------------------------------
 def get_progression():
-    global answer, name, break_out_flag, s
+    global answer, name, break_out_flag, s, r
     name = welcome_user()
     s = 0
     print('What number is missing in the progression?')
     for i in range(3):
-        generate_arith_progression()
         get_sequence_with_hidden()
         get_answer()
         execute_correct_answer()
