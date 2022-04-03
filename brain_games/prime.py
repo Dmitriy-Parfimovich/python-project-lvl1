@@ -29,11 +29,11 @@ def check_prime_number():
 def execute_correct_answer():
     global answer, x, break_out_flag, s
     break_out_flag = False
-    if answer == 'yes' and check_prime_number() == True:
+    if answer == 'yes' and check_prime_number() is True:
         print('Correct!')
         break_out_flag = True
         s += 1
-    if answer == 'no' and check_prime_number() == False:
+    if answer == 'no' and check_prime_number() is False:
         print('Correct!')
         break_out_flag = True
         s += 1
@@ -42,10 +42,10 @@ def execute_correct_answer():
 # execution of the wrong answer from user-------------------------------
 def execute_wrong_answer():
     global answer, x
-    if answer == 'yes' and check_prime_number() == False:
+    if answer == 'yes' and check_prime_number() is False:
         print("'yes' is wrong answer ;(. Correct answer was 'no'.")
         return print("Let's try again, {}!".format(name))
-    if answer == 'no' and check_prime_number() == True:
+    if answer == 'no' and check_prime_number() is True:
         print("'no' is wrong answer ;(. Correct answer was 'yes'.")
         return print("Let's try again, {}!".format(name))
 
