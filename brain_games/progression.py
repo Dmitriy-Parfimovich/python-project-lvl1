@@ -25,13 +25,13 @@ def generate_arith_progression():
 
 # getting of the arithmetic progresson with a hidden char----------------
 def get_sequence_with_hidden():
-    global r, sequence_with_hidden, n, i
+    global r, sequence_with_hidden, num, i
     generate_arith_progression()
     max_of_sequence = len(r) - 1
-    n = randint(0, max_of_sequence)
+    num = randint(0, max_of_sequence)
     sequence_with_hidden = ''
     for i in r:
-        if i == r[n]:
+        if i == r[num]:
             i = '..'
         sequence_with_hidden += str(i) + ' '
     print(f"Question: {sequence_with_hidden}")
@@ -39,29 +39,29 @@ def get_sequence_with_hidden():
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global answer, r, n, break_out_flag, s
+    global answer, r, num, break_out_flag, iteration
     break_out_flag = False
-    if answer == str(r[n]):
+    if answer == str(r[num]):
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
     return break_out_flag
 
 
 # execution of the wrong answer from user-------------------------------
 def execute_wrong_answer():
-    global answer, r, n
-    if answer != str(r[n]):
+    global answer, r, num
+    if answer != str(r[num]):
         print(f"'{answer}' is wrong answer ;(. \
-Correct answer was '{str(r[n])}'.")
+Correct answer was '{str(r[num])}'.")
         return print("Let's try again, {}!".format(name))
 
 
-# brain-progression game function----------------------------------------------
+# brain-progression game function (MAIN)---------------------------------
 def get_progression():
-    global answer, name, break_out_flag, s, r
+    global answer, name, break_out_flag, iteration, r
     name = welcome_user()
-    s = 0
+    iteration = 0
     print('What number is missing in the progression?')
     for i in range(3):
         get_sequence_with_hidden()
@@ -70,5 +70,5 @@ def get_progression():
         if break_out_flag is False:
             execute_wrong_answer()
             break
-    if s == 3:
+    if iteration == 3:
         print('Congratulations, {}!'.format(name))

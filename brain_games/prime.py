@@ -19,24 +19,24 @@ def get_answer():
 # checking of the prime number------------------------------------------
 def check_prime_number():
     global x
-    d = 2
-    while d * d <= x and x % d != 0:
-        d += 1
-    return d * d > x
+    divider = 2
+    while divider * divider <= x and x % divider != 0:
+        divider += 1
+    return divider * divider > x
 
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global answer, x, break_out_flag, s
+    global answer, x, break_out_flag, iteration
     break_out_flag = False
     if answer == 'yes' and check_prime_number() is True:
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
     if answer == 'no' and check_prime_number() is False:
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
 
 
 # execution of the wrong answer from user-------------------------------
@@ -50,11 +50,11 @@ def execute_wrong_answer():
         return print("Let's try again, {}!".format(name))
 
 
-# brain-even game function----------------------------------------------
+# brain-even game function (MAIN)----------------------------------------
 def get_prime():
-    global answer, x, name, break_out_flag, s
+    global answer, x, name, break_out_flag, iteration
     name = welcome_user()
-    s = 0
+    iteration = 0
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range(3):
         get_answer()
@@ -62,5 +62,5 @@ def get_prime():
         if break_out_flag is False:
             execute_wrong_answer()
             break
-    if s == 3:
+    if iteration == 3:
         print('Congratulations, {}!'.format(name))

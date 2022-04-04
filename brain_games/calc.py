@@ -27,12 +27,12 @@ def get_answer():
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global answer, calc, break_out_flag, s
+    global answer, calc, break_out_flag, iteration
     break_out_flag = False
     if answer == str(calc):
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
     return break_out_flag
 
 
@@ -44,11 +44,11 @@ def execute_wrong_answer():
         return print("Let's try again, {}!".format(name))
 
 
-# brain-calc game function----------------------------------------------
+# brain-calc game function (MAIN)----------------------------------------
 def get_calc():
-    global answer, calc, name, break_out_flag, s
+    global answer, calc, name, break_out_flag, iteration
     name = welcome_user()
-    s = 0
+    iteration = 0
     print('What is the result of the expression?')
     for i in range(3):
         get_answer()
@@ -56,5 +56,5 @@ def get_calc():
         if break_out_flag is False:
             execute_wrong_answer()
             break
-    if s == 3:
+    if iteration == 3:
         print('Congratulations, {}!'.format(name))

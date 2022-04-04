@@ -28,12 +28,12 @@ def calculation_gcd():
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global x, answer, break_out_flag, s
+    global x, answer, break_out_flag, iteration
     break_out_flag = False
     if answer == str(x):
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
     return break_out_flag
 
 
@@ -45,11 +45,11 @@ def execute_wrong_answer():
         return print("Let's try again, {}!".format(name))
 
 
-# brain-gcd game function----------------------------------------------
+# brain-gcd game function (MAIN)-----------------------------------------
 def get_gcd():
-    global x, y, answer, name, break_out_flag, s
+    global x, y, answer, name, break_out_flag, iteration
     name = welcome_user()
-    s = 0
+    iteration = 0
     print('Find the greatest common divisor of given numbers.')
     for i in range(3):
         x = randint(1, 99)
@@ -60,5 +60,5 @@ def get_gcd():
         if break_out_flag is False:
             execute_wrong_answer()
             break
-    if s == 3:
+    if iteration == 3:
         print('Congratulations, {}!'.format(name))

@@ -5,7 +5,7 @@ from brain_games.gcd import get_gcd
 
 
 def main():
-    print("Welcome to the Brain Games!")
+    
 
 # function from gcd.py-------------------------------------------------
     get_gcd()

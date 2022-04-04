@@ -18,16 +18,16 @@ def get_answer():
 
 # execution of the correct answer from user-----------------------------
 def execute_correct_answer():
-    global answer, x, break_out_flag, s
+    global answer, x, break_out_flag, iteration
     break_out_flag = False
     if answer == 'yes' and x % 2 == 0 and x != 0:
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
     if answer == 'no' and (x % 2 != 0 or x == 0):
         print('Correct!')
         break_out_flag = True
-        s += 1
+        iteration += 1
 
 
 # execution of the wrong answer from user-------------------------------
@@ -41,11 +41,11 @@ def execute_wrong_answer():
         return print("Let's try again, {}!".format(name))
 
 
-# brain-even game function----------------------------------------------
-def find_even():
-    global answer, x, name, break_out_flag, s
+# brain-even game function (MAIN)----------------------------------------
+def get_even():
+    global answer, x, name, break_out_flag, iteration
     name = welcome_user()
-    s = 0
+    iteration = 0
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
         get_answer()
@@ -53,5 +53,5 @@ def find_even():
         if break_out_flag is False:
             execute_wrong_answer()
             break
-    if s == 3:
+    if iteration == 3:
         print('Congratulations, {}!'.format(name))
