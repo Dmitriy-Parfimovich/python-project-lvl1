@@ -5,9 +5,8 @@ from brain_games.even import get_even
 
 
 def main():
-    
 
-# function from even.py-------------------------------------------------
+    # function from even.py-----------------------------------------------
     get_even()
 
 

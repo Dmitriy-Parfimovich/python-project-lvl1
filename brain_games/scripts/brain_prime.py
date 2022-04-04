@@ -5,9 +5,8 @@ from brain_games.prime import get_prime
 
 
 def main():
-    
 
-# function from prime.py-------------------------------------------------
+    # function from prime.py---------------------------------------------
     get_prime()
 
 

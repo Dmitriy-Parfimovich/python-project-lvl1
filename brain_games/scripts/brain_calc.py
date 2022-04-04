@@ -5,9 +5,8 @@ from brain_games.calc import get_calc
 
 
 def main():
-    
 
-# function from calc.py-------------------------------------------------
+    # function from calc.py---------------------------------------------
     get_calc()
 
 
