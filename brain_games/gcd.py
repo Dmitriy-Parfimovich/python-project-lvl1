@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import prompt
+from brain_games.cli import welcome_user
 from random import randint
 
 
@@ -48,9 +48,7 @@ def execute_wrong_answer():
 # brain-gcd game function (MAIN)-----------------------------------------
 def get_gcd():
     global x, y, answer, name, break_out_flag, iteration
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
+    name = welcome_user()
     iteration = 0
     print('Find the greatest common divisor of given numbers.')
     for i in range(3):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import prompt
+from brain_games.cli import welcome_user
 from random import randint
 
 
@@ -53,9 +53,7 @@ def execute_wrong_answer():
 # brain-even game function (MAIN)----------------------------------------
 def get_prime():
     global answer, x, name, break_out_flag, iteration
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
+    name = welcome_user()
     iteration = 0
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range(3):
