@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import prompt
 from brain_games.cli import welcome_user
 from random import randint
 
@@ -60,7 +61,9 @@ Correct answer was '{str(r[num])}'.")
 # brain-progression game function (MAIN)---------------------------------
 def get_progression():
     global answer, name, break_out_flag, iteration, r
-    name = welcome_user()
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have you name? ')
+    print('Hello, {}!'.format(name))
     iteration = 0
     print('What number is missing in the progression?')
     for i in range(3):

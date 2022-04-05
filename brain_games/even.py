@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import prompt
 from brain_games.cli import welcome_user
 from random import randint
 
@@ -44,7 +45,9 @@ def execute_wrong_answer():
 # brain-even game function (MAIN)----------------------------------------
 def get_even():
     global answer, x, name, break_out_flag, iteration
-    name = welcome_user()
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have you name? ')
+    print('Hello, {}!'.format(name))
     iteration = 0
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
