@@ -48,7 +48,7 @@ def execute_wrong_answer():
 def get_calc():
     global answer, calc, name, break_out_flag, iteration
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have you name? ')
+    name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
     iteration = 0
     print('What is the result of the expression?')

@@ -61,7 +61,7 @@ Correct answer was '{str(r[num])}'.")
 def get_progression():
     global answer, name, break_out_flag, iteration, r
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have you name? ')
+    name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
     iteration = 0
     print('What number is missing in the progression?')
