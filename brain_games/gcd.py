@@ -12,7 +12,7 @@ def get_question():
     while x != y:
         if x > y:
             x = x - y
-            correct_value = x
         if y > x:
             y = y - x
-    return rules, question, correct_value
+        correct_value = x
+        return rules, question, correct_value
