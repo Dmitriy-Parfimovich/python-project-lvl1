@@ -8,7 +8,6 @@ def main_engine(get_question):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    iteration = 0
     for i in range(3):
         [rules, question, correct_value] = get_question()
         answer = ''
@@ -18,13 +17,19 @@ def main_engine(get_question):
         while answer == '':
             print('Your answer: ', end='')
             answer = input()
-        if answer == str(correct_value):
-            print('Correct!')
-            iteration += 1
+        get_game_variants(name, i, answer, correct_value)
         if answer != str(correct_value):
-            print(f"'{answer}' is wrong answer ;(. \
+            break
+
+
+# calling game variants
+def get_game_variants(name, i, answer, correct_value):
+    if answer != str(correct_value):
+        print(f"'{answer}' is wrong answer ;(. \
 Correct answer was '{correct_value}'.")
-            print("Let's try again, {}!".format(name))
-            return
-        if iteration == 3:
-            print('Congratulations, {}!'.format(name))
+        print("Let's try again, {}!".format(name))
+        return
+    if answer == str(correct_value):
+        print('Correct!')
+    if i == 2:
+        print('Congratulations, {}!'.format(name))
