@@ -14,5 +14,5 @@ def get_question():
             x = x - y
         if y > x:
             y = y - x
-        correct_value = x
-        return rules, question, correct_value
+    correct_value = x
+    return rules, question, correct_value
