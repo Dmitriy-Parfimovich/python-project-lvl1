@@ -11,10 +11,15 @@ def get_question():
         if 4 < len(sequence) < 11:
             max_of_sequence = len(sequence) - 1
             num = randint(0, max_of_sequence)
-            question = ''
-            for i in sequence:
-                if i == sequence[num]:
-                    i = '..'
-                question += str(i) + ' '
+            question = get_hidden_sequence(sequence, num)       
             correct_value = sequence[num]
             return rules, question, correct_value
+
+# getting the hidden sequence
+def get_hidden_sequence(sequence, num):
+    question = ''
+    for i in sequence:
+        if i == sequence[num]:
+            i = '..'
+        question += str(i) + ' '
+    return question
