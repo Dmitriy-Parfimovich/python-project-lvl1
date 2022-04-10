@@ -3,7 +3,7 @@
 import prompt
 
 
-# just welcome function-------------------------------------------------
+# the welcome function
 def welcome_user():
 
     print('Welcome to the Brain Games!')

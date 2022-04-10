@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
 
-from brain_games.gcd import get_gcd
+from brain_games.engine import main_engine
+from brain_games.gcd import get_question
 
 
 def main():
 
-    # function from gcd.py-----------------------------------------------
-    get_gcd()
+    # calling the question and answer function from the algorithm the gcd
+    main_engine(get_question)
 
 
 if __name__ == '__main__':

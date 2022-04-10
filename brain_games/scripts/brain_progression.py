@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
 
-from brain_games.progression import get_progression
+from brain_games.engine import main_engine
+from brain_games.progression import get_question
 
 
 def main():
 
-    # function from progression.py----------------------------------------------
-    get_progression()
+    # calling the question and answer func from the algorithm the progression
+    main_engine(get_question)
 
 
 if __name__ == '__main__':

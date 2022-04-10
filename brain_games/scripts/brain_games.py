@@ -6,7 +6,7 @@ from brain_games.cli import welcome_user
 
 def main():
 
-    # function from cli.py--------------------------------------------------
+    # calling the welcome user function from the algorithm the cli
     welcome_user()
 
 

@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
 
-from brain_games.even import get_even
+from brain_games.engine import main_engine
+from brain_games.even import get_question
 
 
 def main():
 
-    # function from even.py-----------------------------------------------
-    get_even()
+    # calling the question and answer function from the algorithm the even
+    main_engine(get_question)
 
 
 if __name__ == '__main__':
