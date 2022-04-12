@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 
-from brain_games.engine import main_engine
-from brain_games.prime import get_question
+from brain_games.games.engine import main_engine
+from brain_games.games.prime import get_question
 
 
 def main():
