@@ -3,9 +3,12 @@
 from random import randint
 
 
+# the rules of the brain-progression game
+rules = 'What number is missing in the progression?'
+
+
 # the progression function, question and answer calculation
 def get_question():
-    rules = 'What number is missing in the progression?'
     while True:
         sequence = range(randint(0, 99), randint(0, 99), randint(1, 99))
         if 4 < len(sequence) < 11:
@@ -13,7 +16,7 @@ def get_question():
             num = randint(0, max_of_sequence)
             question = get_hidden_sequence(sequence, num)
             correct_value = sequence[num]
-            return rules, question, correct_value
+            return question, correct_value
 
 
 # getting the hidden sequence

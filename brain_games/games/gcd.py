@@ -3,16 +3,19 @@
 from random import randint
 
 
+# the rules of the brain-gcd game
+rules = 'Find the greatest common divisor of given numbers.'
+
+
 # the gcd function, question and answer calculation
 def get_question():
-    x = randint(1, 99)
-    y = randint(1, 99)
-    rules = 'Find the greatest common divisor of given numbers.'
-    question = (f"{x} {y}")
-    while x != y:
-        if x > y:
-            x = x - y
-        if y > x:
-            y = y - x
-    correct_value = x
-    return rules, question, correct_value
+    RANDOM_NUM1 = randint(1, 99)
+    RANDOM_NUM2 = randint(1, 99)
+    question = (f"{RANDOM_NUM1} {RANDOM_NUM2}")
+    while RANDOM_NUM1 != RANDOM_NUM2:
+        if RANDOM_NUM1 > RANDOM_NUM2:
+            RANDOM_NUM1 = RANDOM_NUM1 - RANDOM_NUM2
+        if RANDOM_NUM2 > RANDOM_NUM1:
+            RANDOM_NUM2 = RANDOM_NUM2 - RANDOM_NUM1
+    correct_value = RANDOM_NUM1
+    return question, correct_value
