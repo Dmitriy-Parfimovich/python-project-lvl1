@@ -6,6 +6,7 @@ import prompt
 # constants
 CYCLE_COUNT = 3
 
+
 # the MAIN engine (function)
 def main_engine(get_question, rules):
     print('Welcome to the Brain Games!')
