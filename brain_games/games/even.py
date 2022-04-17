@@ -3,15 +3,17 @@
 from random import randint
 
 
-# the rules of the brain-even game
+# constants and the rules of the brain-even game
+START_VALUE = 0
+FINAL_VALUE = 99
 rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 # the even function, question and answer calculation
 def get_question():
-    RANDOM_NUM1 = randint(0, 99)
-    question = str(RANDOM_NUM1)
-    if RANDOM_NUM1 % 2 == 0 and RANDOM_NUM1 != 0:
+    random_num = randint(START_VALUE, FINAL_VALUE)
+    question = str(random_num)
+    if random_num % 2 == 0 and random_num != 0:
         correct_value = 'yes'
     else:
         correct_value = 'no'
