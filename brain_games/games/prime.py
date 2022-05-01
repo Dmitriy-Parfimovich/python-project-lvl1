@@ -6,7 +6,7 @@ from random import randint
 # constants and the rules of the brain-prime game
 START_VALUE = 1
 FINAL_VALUE = 99
-rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 # the prime function, question and answer calculation
@@ -24,6 +24,4 @@ def is_prime(number):
     while divider * divider <= number and number % divider != 0:
         divider += 1
     if divider * divider > number:
-        return True
-    else:
-        return False
+        return divider

@@ -8,7 +8,7 @@ START_VALUE1 = 1
 START_VALUE2 = 1
 FINAL_VALUE1 = 99
 FINAL_VALUE2 = 99
-rules = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
 
 
 # the gcd function, question and answer calculation

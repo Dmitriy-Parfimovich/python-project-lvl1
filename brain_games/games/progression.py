@@ -10,7 +10,7 @@ START_STEP = 1
 FINAL_STEP = 20
 MIN_LENGTH = 5
 MAX_LENGTH = 10
-rules = 'What number is missing in the progression?'
+RULES = 'What number is missing in the progression?'
 
 
 # the progression function, question and answer calculation

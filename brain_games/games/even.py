@@ -6,7 +6,7 @@ from random import randint
 # constants and the rules of the brain-even game
 START_VALUE = 0
 FINAL_VALUE = 99
-rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 # the even function, question and answer calculation

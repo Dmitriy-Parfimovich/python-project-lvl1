@@ -8,7 +8,7 @@ START_VALUE1 = 0
 START_VALUE2 = 0
 FINAL_VALUE1 = 99
 FINAL_VALUE2 = 99
-rules = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 
 
 # the calc function question and answer calculation
